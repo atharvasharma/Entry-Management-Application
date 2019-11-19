@@ -1,4 +1,4 @@
-Innovaccer Hackercamp - Backend API Assignment
+Innovaccer SummerGeeks SDE Assignment
 ==============================================
 
 Innovaccer SummerGeeks submission by Atharva Sharma
