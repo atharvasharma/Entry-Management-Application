@@ -1,0 +1,30 @@
+body{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.container{
+    margin-top:25vh;
+}
+.form-container{
+    background:white;
+    padding: 0 0px;
+}
+
+.heading-div{
+    text-align: center;
+    padding: 15px 0;
+    background: #0F2027;
+    color:white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.form-group{
+    font-weight: bold;
+    opacity: 0.9;
+    padding: 2% 3%;
+    margin:0;
+}
+
+
