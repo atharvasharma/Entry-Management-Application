@@ -7,7 +7,7 @@ let msg=function sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmai
     /*msg91.send(msgNumber, msg, function(err, response){
         if (err) {
           console.log('ERRORDERP: Cannot Send SMS!, Description here: ', err);
-          res.status(500).send('Internal error cannot sned sms please see log for more description.')
+          res.status(500).send('Internal error cannot send sms please see log for more description.')
         }
         else{
           console.log("Your message has been sent successfully!");

@@ -8,5 +8,4 @@ module.exports={
     EMAIL: process.env.EMAIL,
     PASSWORD: process.env.PASSWORD,
     EMAIL_FROM:process.env.EMAIL_FROM,
-    EMAIL_TO:process.env.EMAIL_TO
 }
