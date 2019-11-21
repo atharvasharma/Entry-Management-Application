@@ -27,7 +27,7 @@ router.post("/details",function(req,res){
 
     // using apis to send sms and email to the host
     sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
-    sendEmail(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
+    sendEmail(hostPhone,hostName,hostEmail,visitorName,visitorPhone,visitorEmail);
     
 })
 

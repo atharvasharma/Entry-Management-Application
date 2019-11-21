@@ -4,10 +4,10 @@ const ejs= require('ejs');
 const path=require('path');
 const bodyParser=require('body-parser');
 const router=express.Router();
-
+const detailsRoutes=require('./routes/details');
 // Set up the express app
 const app = express();
-const detailsRoutes=require('./routes/details');
+
 
 // Configure the views and public directory
 app.use(express.static(path.join(__dirname, './public')));

@@ -1,7 +1,7 @@
 const express=require('express');
 const nodemailer=require('nodemailer');
 
-let mail=function sendMail(hostPhone,hostName,visitorName,visitorPhone,visitorEmail){
+let mail=function sendMail(hostPhone,hostName,hostEmail,visitorName,visitorPhone,visitorEmail){
     let transporter=nodemailer.createTransport({
         service:'gmail',
         auth:{
@@ -17,15 +17,16 @@ let mail=function sendMail(hostPhone,hostName,visitorName,visitorPhone,visitorEm
         3. Email:${visitorEmail}
     `
     let mailOptions={
-        from :'atharvasjp1@gmail.com',
-        to:'17ucc018@lnmiit.ac.in',
+        from :process.env.EMAIL_FROM,
+        to:hostEmail,
         subject:'You have a visitor',
         text:msg
     };
 
     transporter.sendMail(mailOptions,function(err,res){
         if(err){
-            console.log(err);
+            console.log('ERRORDERP: Cannot Send Email! Please check if you have turned on less secure apps, Description here: ', err);
+            res.status(500).send('Internal error cannot send email please see log for more description.')
         }else{
             console.log("email sent!!");
         }
