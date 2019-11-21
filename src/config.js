@@ -5,4 +5,6 @@ module.exports={
     AUTHENTICATIONKEY : process.env.AUTHENTICATIONKEY,
     ROUTENUMBER : process.env.ROUTENUMBER,
     SENDERID : process.env.SENDERID,
+    EMAIL: process.env.EMAIL,
+    PASSWORD: process.env.PASSWORD,
 }
