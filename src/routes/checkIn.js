@@ -52,7 +52,7 @@ router.post("/checkin",function(req,res){
                             console.log("Visitor and Host added successfully");
                         }
                     })
-                }else{                                     // create new host, add new visitor to that host.
+                }else{                                     // else create new host, add new visitor to that host.
                     Host.create({
                         name:hostName,
                         email:hostEmail,
