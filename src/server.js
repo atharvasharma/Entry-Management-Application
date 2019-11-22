@@ -3,8 +3,8 @@ const config = require('./config');
 const ejs= require('ejs');
 const path=require('path');
 const bodyParser=require('body-parser');
-const router=express.Router();
-const detailsRoutes=require('./routes/details');
+const checkInRoutes=require('./routes/checkIn');
+const mongoose=require('mongoose');
 
 // Set up the express app
 const app = express();
@@ -15,8 +15,16 @@ app.set('view engine','ejs');
 app.set('views', path.join(__dirname, './views'));
 app.use(bodyParser.urlencoded({extended:true}));
 
+// connect to database
+mongoose.connect("mongodb://localhost/entry_management",{useUnifiedTopology: true,useNewUrlParser: true}).then(()=>{
+   console.log(`connection to database established`)
+   }).catch(err=>{
+      console.log(`db error ${err.message}`);
+});
+
+
 // routes
-app.use(detailsRoutes);
+app.use(checkInRoutes);
 
 // Setting up the server
 let port = process.env.PORT || 3000;
