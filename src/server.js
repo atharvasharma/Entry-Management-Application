@@ -3,8 +3,10 @@ const config = require('./config');
 const ejs= require('ejs');
 const path=require('path');
 const bodyParser=require('body-parser');
-const checkInRoutes=require('./routes/checkIn');
 const mongoose=require('mongoose');
+
+const checkInRoutes=require('./routes/checkIn');
+const registerRoutes=require('./routes/register');
 
 // Set up the express app
 const app = express();
@@ -24,6 +26,7 @@ mongoose.connect("mongodb://localhost/entry_management",{useUnifiedTopology: tru
 mongoose.set('useCreateIndex', true);
 
 // routes
+app.use(registerRoutes);
 app.use(checkInRoutes);
 
 // Setting up the server

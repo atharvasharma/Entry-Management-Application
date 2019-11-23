@@ -24,10 +24,7 @@ router.post("/checkin",function(req,res){
     let visitorName=req.body['visitor-name'];
     let visitorEmail=req.body['visitor-email'];
     let visitorPhone=req.body['visitor-phone'];
-    let hostName=req.body['host-name'];
     let hostEmail=req.body['host-email'];
-    let hostPhone=req.body['host-phone'];
-
     // get current time and date in IST
     const checkInTime=getTime();
     const checkInDate=getDate();
@@ -51,29 +48,18 @@ router.post("/checkin",function(req,res){
                     if(err){
                         console.log("An error occured, Description: "+err);
                     }else{
-                        if(foundHost){                              // if host already exists in db then add visitor of that host.
+                        if(foundHost){                              // add visitor to that host
                             foundHost.visitors.push(newVisitor);
                             foundHost.save(function(err,data){
                                 if(err){
                                     console.log("An error occured, description: "+ err);
                                 }else{
-                                    console.log("Visitor and Host added successfully");
+                                    console.log("Visitor added successfully in database");
+                                    let hostPhone=foundHost.phone;
+                                    let hostName=foundHost.name;
+                                    sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
+                                    sendEmail(hostPhone,hostName,hostEmail,visitorName,visitorPhone,visitorEmail);
                                 }
-                            })
-                        }else{                                     // else create new host, add new visitor of that host.
-                            Host.create({
-                                name:hostName,
-                                email:hostEmail,
-                                phone:hostPhone,
-                            }).then(function(newHost){
-                                newHost.visitors.push(newVisitor);
-                                newHost.save(function(err,data){
-                                    if(err){
-                                        console.log("An error occured, description: "+ err);
-                                    }else{
-                                        console.log("Visitor and Host added successfully");
-                                    }
-                                })
                             })
                         }
                     }
@@ -84,11 +70,6 @@ router.post("/checkin",function(req,res){
             });
         }    
     })
-    
-
-    // using apis to send sms and email to the host
-   // sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
-    //sendEmail(hostPhone,hostName,hostEmail,visitorName,visitorPhone,visitorEmail);
 })
 
 module.exports=router;
