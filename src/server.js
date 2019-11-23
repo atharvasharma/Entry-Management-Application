@@ -21,7 +21,7 @@ mongoose.connect("mongodb://localhost/entry_management",{useUnifiedTopology: tru
    }).catch(err=>{
       console.log(`db error ${err.message}`);
 });
-
+mongoose.set('useCreateIndex', true);
 
 // routes
 app.use(checkInRoutes);

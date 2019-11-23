@@ -9,6 +9,10 @@ let visitorSchema=new Schema({
     checkInDate: {type:String,required:true,default:null},
     timeStamp: {type:Number,default:null},
     checkOutTime: String,
+    status :{
+                type:String,
+                enum:['Pending','Departed']
+            }
 });
 
 module.exports=mongoose.model("Visitor",visitorSchema);
