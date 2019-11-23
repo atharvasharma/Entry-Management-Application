@@ -12,7 +12,8 @@ let visitorSchema=new Schema({
     status :{
                 type:String,
                 enum:['Pending','Departed']
-            }
+    },
+    hostEmail:{type:String}
 });
 
 module.exports=mongoose.model("Visitor",visitorSchema);

@@ -1,5 +1,6 @@
 const dotenv=require('dotenv');
 dotenv.config();
+
 module.exports={
     PORT:process.env.PORT,
     AUTHENTICATIONKEY : process.env.AUTHENTICATIONKEY,
@@ -8,4 +9,5 @@ module.exports={
     EMAIL: process.env.EMAIL,
     PASSWORD: process.env.PASSWORD,
     EMAIL_FROM:process.env.EMAIL_FROM,
+    ADDRESS:process.env.ADDRESS,
 }

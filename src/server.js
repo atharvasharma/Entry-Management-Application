@@ -5,8 +5,9 @@ const path=require('path');
 const bodyParser=require('body-parser');
 const mongoose=require('mongoose');
 
-const checkInRoutes=require('./routes/checkIn');
 const registerRoutes=require('./routes/register');
+const checkInRoutes=require('./routes/checkIn');
+const checkOutRoutes=require('./routes/checkOut');
 
 // Set up the express app
 const app = express();
@@ -28,7 +29,7 @@ mongoose.set('useCreateIndex', true);
 // routes
 app.use(registerRoutes);
 app.use(checkInRoutes);
-
+app.use(checkOutRoutes);
 // Setting up the server
 let port = process.env.PORT || 3000;
 app.listen(port, function () {

@@ -41,7 +41,8 @@ router.post("/checkin",function(req,res){
                 checkInTime:checkInTime,
                 checkInDate:checkInDate,
                 timeStamp:timeStamp,
-                status:'Pending'
+                status:'Pending',
+                hostEmail:hostEmail
             })
             .then(function(newVisitor){    
                 Host.findOne({email:hostEmail},function(err,foundHost){     // find host in db as entered by visitor
@@ -57,8 +58,8 @@ router.post("/checkin",function(req,res){
                                     console.log("Visitor added successfully in database");
                                     let hostPhone=foundHost.phone;
                                     let hostName=foundHost.name;
-                                    sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
-                                    sendEmail(hostPhone,hostName,hostEmail,visitorName,visitorPhone,visitorEmail);
+                                    //sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
+                                    //sendEmail(hostName,hostEmail,visitorName,visitorPhone,visitorEmail,null,null,true);
                                 }
                             })
                         }
