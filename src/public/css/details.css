@@ -1,11 +1,12 @@
-body{
-    background: #0F2027;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+body {
+    background: #eee;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
 }
 .container{
-    margin-top:25vh;
+    margin-top:15vh;
 }
 .form-container{
     background:white;
@@ -15,7 +16,7 @@ body{
 .heading-div{
     text-align: center;
     padding: 15px 0;
-    background: #0F2027;
+    background: rgb(33,33,33);
     color:white;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -26,5 +27,19 @@ body{
     padding: 2% 3%;
     margin:0;
 }
+.submit-button{
+    text-align: center;
+    margin:20px 0;
+}
 
+@media only screen and (max-width: 600px) {
+    
+    .heading-div{
+        background: none;
+        color:black;
+    }
+    .form-container{
+        background:none;
+    }
+}
 

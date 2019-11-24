@@ -14,7 +14,7 @@ router.get("/checkout",function(req,res){
 router.post("/checkout",function(req,res){
 
     let visitorEmail=req.body['visitor-email'];
-    Visitor.findOne({email:visitorEmail},function(err,foundVisitor){
+    Visitor.findOne({email:visitorEmail,status:'Pending'},function(err,foundVisitor){
         if(err){
             console.log("An error occured, description: "+err);
         }

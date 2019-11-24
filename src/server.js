@@ -5,6 +5,7 @@ const path=require('path');
 const bodyParser=require('body-parser');
 const mongoose=require('mongoose');
 
+const indexRoutes=require('./routes/index');
 const registerRoutes=require('./routes/register');
 const checkInRoutes=require('./routes/checkIn');
 const checkOutRoutes=require('./routes/checkOut');
@@ -27,9 +28,11 @@ mongoose.connect("mongodb://localhost/entry_management",{useUnifiedTopology: tru
 mongoose.set('useCreateIndex', true);
 
 // routes
+app.use(indexRoutes);
 app.use(registerRoutes);
 app.use(checkInRoutes);
 app.use(checkOutRoutes);
+
 // Setting up the server
 let port = process.env.PORT || 3000;
 app.listen(port, function () {

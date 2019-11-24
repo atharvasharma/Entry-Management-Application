@@ -59,7 +59,7 @@ router.post("/checkin",function(req,res){
                                     let hostPhone=foundHost.phone;
                                     let hostName=foundHost.name;
                                     //sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
-                                    //sendEmail(hostName,hostEmail,visitorName,visitorPhone,visitorEmail,null,null,true);
+                                    sendEmail(hostName,hostEmail,visitorName,visitorPhone,visitorEmail,null,null,true);
                                 }
                             })
                         }
