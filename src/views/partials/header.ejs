@@ -9,9 +9,21 @@
 </label>
 <div id="sidebarMenu">
     <ul class="sidebarMenuInner">
-        <li><a href="/">Home</a></li>
-        <li><a href="/register">Register As Host</a></li>
-        <li><a href="/checkin">Check In</a></li>
-        <li><a href="/checkout">Check Out</a></li>
+        <a href="/"><li>Home</li></a>
+        <a href="/register"><li>Register As Host</li></a>
+        <a href="/checkin"><li>Check In</li></a>
+        <a href="/checkout"><li>Check Out</li></a>
     </ul>
 </div>
+<div style="margin-top:10vh;position:fixed;top:3vh;right:3vh;">
+    <% if(success && success.length>0){ %>
+        <div class="alert alert-success" role="alert">
+            <%= success %>
+        </div>
+    <% } %>
+    <% if(error && error.length>0){ %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    <% } %>   
+</div> 

@@ -16,14 +16,14 @@ router.post("/checkout",function(req,res){
     let visitorEmail=req.body['visitor-email'];
     Visitor.findOne({email:visitorEmail,status:'Pending'},function(err,foundVisitor){
         if(err){
-            console.log("An error occured, description: "+err);
+            req.flash("error","We encountered an error!. Please try again");
+            res.redirect("/checkout");
         }
-        else if(foundVisitor.status=='Pending'){
+        else if(foundVisitor){
             let checkOutTime=getTime();
             foundVisitor.status='Departed';
             foundVisitor.checkOutTime=checkOutTime;
             foundVisitor.save();
-            console.log("You have been checked out!");
             let visitorName=foundVisitor.name;
             let visitorPhone=foundVisitor.phone;
             let checkInTime=foundVisitor.checkInTime;
@@ -31,14 +31,18 @@ router.post("/checkout",function(req,res){
             let hostName;
             Host.findOne({email:hostEmail},function(err,foundHost){
                 if(err){
-                    console.log('An error occured, Description:'+err);
+                    req.flash("error","We could not connect you to the host. Please try again");
+                    res.redirect("/checkout");
                 }else{
                     hostName=foundHost.name;
                     sendEmail(hostName,null,visitorName,visitorPhone,visitorEmail,checkOutTime,checkInTime,false);
+                    req.flash("success","We have checked you out.");
+                    res.redirect("/");
                 }
             })
         }else{
-            console.log("You have already been checked out");
+            req.flash("error","You have not checked in");
+            res.redirect("/checkout");
         }
     })
 })

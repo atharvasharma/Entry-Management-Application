@@ -2,7 +2,9 @@
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <link rel="stylesheet" type="text/css" href="css/details.css">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <% include partials/header.ejs %>
+
 <div class="container">
     <form method='POST' action='/checkin'>
         <div class="row">
@@ -22,12 +24,21 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="tel" class="form-control" id="phone" placeholder="Enter Phone Number" name='visitor-phone' maxlength='10' required>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter Phone Number" name='visitor-phone' maxlength='10' size='10'required>
                 </div>
+
                 <div class="form-group">
+                    <label>Host Email</label><br>
+                    <select name='host-email'>
+                        <% for(let i=0;i<hosts.length;i++){ %>
+                            <option value="<%= hosts[i].email %>"><%= hosts[i].email%> (<%= hosts[i].name %>)</option>
+                        <% } %>
+                    </select>
+                </div>
+                <!--<div class="form-group">
                     <label for="host-email">Host Email</label>
                     <input type="email" class="form-control" id="host-email" placeholder="Enter Your Host Email" name='host-email' required>
-                </div>
+                </div>-->
                 <div class="submit-button"> 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>

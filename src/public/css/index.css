@@ -132,9 +132,10 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     transform: rotate(-135deg);
     margin-top: -9px;
 }
-
+.index-container{
+    margin-top:15vh;
+}
 .heading-row{
-    margin-top:20vh;
     text-align: center;
 }
 
@@ -148,8 +149,11 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     box-shadow: -3px -7px 7px -7px rgba(0,0,0,0.1);
     border:2px solid rgba(0,0,0,0.1);
     font-size:1.1rem;
+    transition:transform .2s;
 }
-
+.visitor-div:hover, .host-div:hover{
+    transform:scale(1.1);
+}
 .host-div{
     -webkit-box-shadow: -3px -7px 7px -7px rgba(0,0,0,0.1);
     -moz-box-shadow:  -3px -7px 7px -7px rgba(0,0,0,0.1);

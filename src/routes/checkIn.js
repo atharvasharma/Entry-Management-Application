@@ -12,7 +12,9 @@ const getTime=require('../utils/get-time');
 const getDate=require('../utils/get-date');
 
 router.get("/checkin",function(req,res){
-    res.render("checkIn-form");
+    Host.find({},function(err,hosts){
+        res.render("checkIn-form",{hosts:hosts});
+    });
 })
 
 router.post("/checkin",function(req,res){
@@ -29,10 +31,11 @@ router.post("/checkin",function(req,res){
     const checkInTime=getTime();
     const checkInDate=getDate();
 
-    //enter visitor and host details in db
-    Visitor.findOne({email:visitorEmail},function(err,foundVisitor){
-        if(foundVisitor && foundVisitor.status=='Pending'){   // might happen that visitor has already checked in.
-            console.log("You have already checked in");
+    //enter visitor details in db
+    Visitor.findOne({email:visitorEmail,status:'Pending'},function(err,foundVisitor){
+        if(foundVisitor){   // might happen that visitor has already checked in.
+            req.flash("error","You have already checked in.");
+            res.redirect("/checkin");
         }else{                                                // else add visitor in db  
             Visitor.create({
                 name:visitorName,
@@ -47,19 +50,22 @@ router.post("/checkin",function(req,res){
             .then(function(newVisitor){    
                 Host.findOne({email:hostEmail},function(err,foundHost){     // find host in db as entered by visitor
                     if(err){
-                        console.log("An error occured, Description: "+err);
+                        req.flash("error","An error occured. Please try again");
+                        res.redirect("/checkin");
                     }else{
                         if(foundHost){                              // add visitor to that host
                             foundHost.visitors.push(newVisitor);
                             foundHost.save(function(err,data){
                                 if(err){
-                                    console.log("An error occured, description: "+ err);
+                                    req.flash("error","An error occured. Please try again");
+                                    res.redirect("/checkin");
                                 }else{
-                                    console.log("Visitor added successfully in database");
                                     let hostPhone=foundHost.phone;
                                     let hostName=foundHost.name;
-                                    //sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
+                                    sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
                                     sendEmail(hostName,hostEmail,visitorName,visitorPhone,visitorEmail,null,null,true);
+                                    req.flash("success","You have been successfully added as a visitor");
+                                    res.redirect("/");
                                 }
                             })
                         }
@@ -67,7 +73,8 @@ router.post("/checkin",function(req,res){
                 });
             })
             .catch(function(err){
-                console.log("Oops! An error occured. Description: "+err);
+                req.flash("error","An error occured. Please try again");
+                res.redirect("/checkin");
             });
         }    
     })
