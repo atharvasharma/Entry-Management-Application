@@ -22,7 +22,7 @@ Given the visitors that we have in office and outside, there is a need to for an
 
 1, Clone this repository:
 
-```git clone <https://github.com/chaitanyagiri/innovaccer-hackercamp-backend.git>```
+```git clone <https://github.com/atharvasharma/Innovaccer-Summer-Geeks-SDE>```
 
 2, Change directory
 
