@@ -74,7 +74,8 @@ Routes
 ---------------
 ### 1\. "http://localhost:4000" Used to display home page of the application.
 This page gives the user option to either register as a host or for a visitor to check in and out.
-It looks something like this: <br>
+It looks something like this:
+
 ![index](https://github.com/atharvasharma/Innovaccer-images/blob/master/home.JPG)
 
 
@@ -85,9 +86,11 @@ The page looks like:
 ![register](https://github.com/atharvasharma/Innovaccer-images/blob/master/register.JPG)
 
 If the host is able to register successfully. He is shown the success message as:
+
 ![register success](https://github.com/atharvasharma/Innovaccer-images/blob/master/register%20success.JPG)
 
 If the host has already registered, then he is shown error message as:
+
 ![register fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/register%20fail.JPG)
 
 #### Approach used for registration of host: 
@@ -104,9 +107,11 @@ The page looks like:
 ![check in](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkIn.JPG)
 
 If user is able to check in successfully, then he gets a success message as:
+
 ![check in success](https://github.com/atharvasharma/Innovaccer-images/blob/master/check%20in%20success.JPG)
 
 If the user tries to checkin, even though he has already checked in. Then he is informed about the same though an error msg:
+
 ![check in fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkin%20fail.JPG)
 
 #### Approach used for check-in: 
@@ -124,9 +129,11 @@ The page looks like:
 ![check out](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkout.JPG)
 
 If user is able to check out successfully, then he gets a success message as:
+
 ![check out success](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkout%20sucess.JPG)
 
 If user has already checked out, or forgot to checkin , he gets an error message as:
+
 ![check out fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/check%20out%20fail.JPG)
 
 #### Approach used for check-out: 
