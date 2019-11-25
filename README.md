@@ -74,13 +74,13 @@ Routes
 ---------------
 ### 1\. "http://localhost:4000" Used to display home page of the application.
 This page gives the user option to either register as a host or for a visitor to check in and out.
-It looks something like this:
+It looks something like this: <br>
 ![index](https://github.com/atharvasharma/Innovaccer-images/blob/master/home.JPG)
 
 
 ### 2\. "http://localhost:4000/register" Host can register himself here.
 This page is used for the host to register. After registering the host will be visible to the visitor.
-The page looks like:
+The page looks like: <br>
 ![register](https://github.com/atharvasharma/Innovaccer-images/blob/master/register.JPG)
 
 If the host is able to register successfully. He is shown the success message as:
@@ -89,7 +89,7 @@ If the host is able to register successfully. He is shown the success message as
 If the host has already registered, then he is shown error message as:
 ![register fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/register%20fail.JPG)
 
-##### Approach used for registration of host: 
+#### Approach used for registration of host: 
 a. Fetch details as entered by host. <br>
 b. Find if a Host with that email already exists in db. If so, flash an error message. <br>
 c. Else add host to db, flash a success message. <br>
@@ -98,7 +98,7 @@ c. Else add host to db, flash a success message. <br>
 This page is used for the visitor to check-in. He will have to choose from one of the existing hosts and enter his own details.
 This will trigger an sms and email to host using API, details of which have been provided in .env file.
 
-The page looks like:
+The page looks like: <br>
 ![check in](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkIn.JPG)
 
 If user is able to check in successfully, then he gets a success message as:
@@ -107,7 +107,7 @@ If user is able to check in successfully, then he gets a success message as:
 If the user tries to checkin, even though he has already checked in. Then he is informed about the same though an error msg:
 ![check in fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkin%20fail.JPG)
 
-##### Approach used for check-in: 
+#### Approach used for check-in: 
 a. Fetch information as filled in by visitor. <br>
 b. Get current date and time as well as timestamp of the entry. <br>
 c. Find a visitor with that email and status as 'pending'. This means that he has already checked in beacuse he is already there in db with status pending. So flash an error. <br>
@@ -117,7 +117,7 @@ e. Send sms and email to host. <br>
 ### 4\. "http://localhost:4000/checkout" Visitor can check-out here
 This page is used for the visitor to check-out. He will have to provide his email id to checkout from the application. After checking-out he will recieve an email, giving the details of his visit with the office address as provided in the .env file.
 
-The page looks like:
+The page looks like: <br>
 ![check out](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkout.JPG)
 
 If user is able to check out successfully, then he gets a success message as:
@@ -126,7 +126,7 @@ If user is able to check out successfully, then he gets a success message as:
 If user has already checked out, or forgot to checkin , he gets an error message as:
 ![check out fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/check%20out%20fail.JPG)
 
-##### Approach used for check-out: 
+#### Approach used for check-out: 
 a. Fetch visitor email from post request. <br>
 b. Find visitor with email same as entered in form and status as pending. If we are able to find such visitor then mark his status as departed and send him the mail of details. <br>
 c. Else the visitor forgot to check in or has already checked out. So flash an error msg. <br>
