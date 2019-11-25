@@ -41,7 +41,7 @@ router.post("/checkout",function(req,res){
                 }
             })
         }else{
-            req.flash("error","You have not checked in");
+            req.flash("error","You forgot to check in or you have already checked out");
             res.redirect("/checkout");
         }
     })
