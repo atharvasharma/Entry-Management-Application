@@ -108,9 +108,16 @@ This page is used for the visitor to check-out. He will have to provide his emai
 The page looks like:
 ![check out](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkout.JPG)
 
-If user is able to check in successfully, then he gets a success message as:
+If user is able to check out successfully, then he gets a success message as:
 ![check out success](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkout%20sucess.JPG)
 
 If user has already checked out, or forgot to checkin , he gets an error message as:
 ![check out fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/check%20out%20fail.JPG)
 
+### CONTACT
+
+Atharva Sharma
+
+Ph-8890307960
+
+[Email01 -17ucc018@lnmiit.ac.in](mailto:Email-17ucc018@lnmiit.ac.in)
