@@ -68,7 +68,7 @@ You should get something like this when every step has been followed correctly:
 
 ### Folder Structure:
 
-![Folder](https://github.com/atharvasharma/Innovaccer-images/blob/master/folder.png)
+![Folder](https://github.com/atharvasharma/Innovaccer-images/blob/master/folder.JPG)
 
 Routes
 ---------------
