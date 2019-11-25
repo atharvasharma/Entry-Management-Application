@@ -80,7 +80,8 @@ It looks something like this: <br>
 
 ### 2\. "http://localhost:4000/register" Host can register himself here.
 This page is used for the host to register. After registering the host will be visible to the visitor.
-The page looks like: <br>
+The page looks like:
+
 ![register](https://github.com/atharvasharma/Innovaccer-images/blob/master/register.JPG)
 
 If the host is able to register successfully. He is shown the success message as:
@@ -98,7 +99,8 @@ c. Else add host to db, flash a success message. <br>
 This page is used for the visitor to check-in. He will have to choose from one of the existing hosts and enter his own details.
 This will trigger an sms and email to host using API, details of which have been provided in .env file.
 
-The page looks like: <br>
+The page looks like:
+
 ![check in](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkIn.JPG)
 
 If user is able to check in successfully, then he gets a success message as:
@@ -117,7 +119,8 @@ e. Send sms and email to host. <br>
 ### 4\. "http://localhost:4000/checkout" Visitor can check-out here
 This page is used for the visitor to check-out. He will have to provide his email id to checkout from the application. After checking-out he will recieve an email, giving the details of his visit with the office address as provided in the .env file.
 
-The page looks like: <br>
+The page looks like:
+
 ![check out](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkout.JPG)
 
 If user is able to check out successfully, then he gets a success message as:
