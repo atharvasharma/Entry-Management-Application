@@ -65,3 +65,14 @@ ADDRESS= SPECIFY YOUR OFFICE ADDRESS HERE.
 
 You should get something like this when every step has been followed correctly:
 ![Server](https://github.com/atharvasharma/Innovaccer-images/blob/master/server.JPG)
+
+### Folder Structure:
+
+![Folder](https://github.com/atharvasharma/Innovaccer-images/blob/master/folder.png)
+
+Routes
+---------------
+### 1\. "localhost:4000" Used to display home page of the application.
+This page gives the user option to either register as a host or for a visitor to check in and out.
+It looks something like:
+![Folder](https://github.com/atharvasharma/Innovaccer-images/blob/master/home.JPG)
