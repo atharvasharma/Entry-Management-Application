@@ -39,7 +39,7 @@ Refer to this link - <https://msg91.com/>
 5, Create a .env file and add below mentioned details in it.
 ```
 # specify your port number here
-PORT=
+PORT= PORT  NUMBER HERE
 
 # specify credentials of msg91 (messaging api) here.
 # route number is 1 for promotional and 4 for transactional msgs.
