@@ -89,7 +89,10 @@ If the host is able to register successfully. He is shown the success message as
 If the host has already registered, then he is shown error message as:
 ![register fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/register%20fail.JPG)
 
-##### Approach used: 
+##### Approach used for registration of host: 
+a. Fetch details as entered by host.
+b. Find if a Host with that email already exists in db. If so, flash an error message.
+c. Else add host to db, flash a success message.
 
 ### 3\. "http://localhost:4000/checkin" Visitor can check-in here.
 This page is used for the visitor to check-in. He will have to choose from one of the existing hosts and enter his own details.
@@ -104,6 +107,13 @@ If user is able to check in successfully, then he gets a success message as:
 If the user tries to checkin, even though he has already checked in. Then he is informed about the same though an error msg:
 ![check in fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkin%20fail.JPG)
 
+##### Approach used for check-in: 
+a. Fetch information as filled in by visitor.
+b. Get current date and time as well as timestamp of the entry.
+c. Find a visitor with that email and status as 'pending'. This means that he has already checked in beacuse he is already there in db with status pending. So flash an error.
+d. Else add the visitor in db, find host as entered by visitor and push visitor into visitors array for that host. This will help in host to see all the visitors he had.
+e. Send sms and email to host.
+
 ### 4\. "http://localhost:4000/checkout" Visitor can check-out here
 This page is used for the visitor to check-out. He will have to provide his email id to checkout from the application. After checking-out he will recieve an email, giving the details of his visit with the office address as provided in the .env file.
 
@@ -115,6 +125,11 @@ If user is able to check out successfully, then he gets a success message as:
 
 If user has already checked out, or forgot to checkin , he gets an error message as:
 ![check out fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/check%20out%20fail.JPG)
+
+##### Approach used for check-out: 
+a. Fetch visitor email from post request.
+b. Find visitor with email same as entered in form and status as pending. If we are able to find such visitor then mark his status as departed and send him the mail of details.
+c. Else the visitor forgot to check in or has already checked out. So flash an error msg.
 
 ### CONTACT
 
