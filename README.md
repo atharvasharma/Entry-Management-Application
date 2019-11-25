@@ -26,7 +26,7 @@ Given the visitors that we have in office and outside, there is a need to for an
 
 2, Change directory
 
-```cd Innovaccer-Summer-Geeks-Sde```
+```cd Innovaccer-Summer-Geeks-SDE```
 
 3, Install dependencies
 
