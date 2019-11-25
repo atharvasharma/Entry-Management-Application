@@ -64,3 +64,4 @@ ADDRESS= SPECIFY YOUR OFFICE ADDRESS HERE.
 ```npm start```
 
 You should get something like this when every step has been followed correctly:
+![Server](https://github.com/atharvasharma/Innovaccer-images/blob/master/server.JPG)
