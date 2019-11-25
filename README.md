@@ -120,4 +120,4 @@ Atharva Sharma
 
 Ph-8890307960
 
-[Email01 -17ucc018@lnmiit.ac.in](mailto:Email-17ucc018@lnmiit.ac.in)
+[Email -17ucc018@lnmiit.ac.in](mailto:Email-17ucc018@lnmiit.ac.in)
