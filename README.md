@@ -89,6 +89,8 @@ If the host is able to register successfully. He is shown the success message as
 If the host has already registered, then he is shown error message as:
 ![register fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/register%20fail.JPG)
 
+##### Approach used: 
+
 ### 3\. "http://localhost:4000/checkin" Visitor can check-in here.
 This page is used for the visitor to check-in. He will have to choose from one of the existing hosts and enter his own details.
 This will trigger an sms and email to host using API, details of which have been provided in .env file.
