@@ -70,13 +70,31 @@ You should get something like this when every step has been followed correctly:
 
 ![Folder](https://github.com/atharvasharma/Innovaccer-images/blob/master/folder.JPG)
 
+### Models Used:
+##### 1. Visitor:
+  a. Name <br>
+  b. Email <br>
+  c. Phone <br>
+  d. checkInTime <br>
+  e. checkInDate <br>
+  f. timeStamp <br>
+  g. checkoutTIme <br>
+  h. status <br>
+  i. hostEmail <br>
+
+##### 2. Host: 
+  a. Name <br>
+  b. Email <br>
+  c. Phone <br>
+  d. Visitors []  // Relation between Host and Visitor is 1:N relationship. <br>
+
 Routes
 ---------------
 ### 1\. "http://localhost:4000" Used to display home page of the application.
 This page gives the user option to either register as a host or for a visitor to check in and out.
 It looks something like this:
 
-![index](https://github.com/atharvasharma/Innovaccer-images/blob/master/home.JPG)
+![index](https://github.com/atharvasharma/Innovaccer-images/blob/master/index.JPG)
 
 
 ### 2\. "http://localhost:4000/register" Host can register himself here.
