@@ -37,7 +37,7 @@ app.set('views', path.join(__dirname, './views'));
 app.use(bodyParser.urlencoded({extended:true}));
 
 // connect to database
-mongoose.connect("mongodb://localhost/entry_management",{useUnifiedTopology: true,useNewUrlParser: true}).then(()=>{
+mongoose.connect("mongodb+srv://atharvasharma1503:BzeS8709*@cluster0-7yrlf.mongodb.net/test?retryWrites=true&w=majority",{useUnifiedTopology: true,useNewUrlParser: true}).then(()=>{
    console.log(`connection to database established`)
    }).catch(err=>{
       console.log(`db error ${err.message}`);

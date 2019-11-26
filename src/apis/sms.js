@@ -1,5 +1,5 @@
 const express=require('express');
-const msg91 = require("msg91")(process.env.AUTHENTICATIONKEY, process.env.SENDERID,process.env.ROUTENUMBER);
+const msg91 = require("msg91")('304908AsqhYvtb5dd5bda7', 'TESTIN',4);
 
 let msg=function sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail){
     const msgNumber='91'+hostPhone;

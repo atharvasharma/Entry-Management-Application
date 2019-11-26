@@ -5,8 +5,8 @@ let mail=function sendMail(hostName,hostEmail,visitorName,visitorPhone,visitorEm
     let transporter=nodemailer.createTransport({
         service:'gmail',
         auth:{
-            user:process.env.EMAIL,
-            pass:process.env.PASSWORD
+            user:'atharvasjp1@gmail.com',
+            pass:'Vivek@1234'
         }
     });
     let mailOptions;
@@ -19,13 +19,13 @@ let mail=function sendMail(hostName,hostEmail,visitorName,visitorPhone,visitorEm
             3. Email:${visitorEmail}
         `
         mailOptions={
-            from :process.env.EMAIL_FROM,
+            from :'atharvasjp1@gmail.com',
             to:hostEmail,
             subject:'You have a visitor',
             text:msg
         };
     }else{
-        let address=process.env.ADDRESS;
+        let address='LNMIIT';
         let msg=`
             Hey ${visitorName},
             We are writing this to inform you that you have been successfully checked out. \n
@@ -39,7 +39,7 @@ let mail=function sendMail(hostName,hostEmail,visitorName,visitorPhone,visitorEm
             6. Address visited : ${address} \n
         `
         mailOptions={
-            from :process.env.EMAIL_FROM,
+            from :'atharvasjp1@gmail.com',
             to:visitorEmail,
             subject:'Thanks for visiting us!',
             text:msg
