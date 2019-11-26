@@ -13,18 +13,23 @@ const checkOutRoutes=require('./routes/checkOut');
 
 // Set up the express app
 const app = express();
+
 //Set up flash messages
 app.use(flash());
+
+// Set up express session
 app.use(require('express-session')({
    secret:"This is Atharva's project",
    resave:false,
    saveUninitialized:false
 }));
+
 app.use(function(req,res,next){
    res.locals.error=req.flash("error");
    res.locals.success=req.flash("success");
    next();
 })
+
 // Configure the views and public directory
 app.use(express.static(path.join(__dirname, './public')));
 app.set('view engine','ejs');

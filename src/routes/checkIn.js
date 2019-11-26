@@ -12,7 +12,7 @@ const getTime=require('../utils/get-time');
 const getDate=require('../utils/get-date');
 
 router.get("/checkin",function(req,res){
-    Host.find({},function(err,hosts){
+    Host.find({},function(err,hosts){            // find hosts currently present in db.
         res.render("checkIn-form",{hosts:hosts});
     });
 })
@@ -62,8 +62,9 @@ router.post("/checkin",function(req,res){
                                 }else{
                                     let hostPhone=foundHost.phone;
                                     let hostName=foundHost.name;
-                                   // sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
+                                    sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
                                     sendEmail(hostName,hostEmail,visitorName,visitorPhone,visitorEmail,null,null,true);
+                                    req.session.visitorEmail=newVisitor.email;   //add visitor Email to express session.
                                     req.flash("success","You have been successfully added as a visitor");
                                     res.redirect("/");
                                 }
