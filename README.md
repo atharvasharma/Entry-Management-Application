@@ -89,7 +89,7 @@ You should get something like this when every step has been followed correctly:
   &nbsp;&nbsp;&nbsp;&nbsp;c. Phone <br>
   &nbsp;&nbsp;&nbsp;&nbsp;d. Visitors []  // Relation between Host and Visitor is 1:N relationship. <br>
   
-Routes
+Routes (with approaches)
 ---------------
 ### 1\. "http://localhost:4000" Used to display home page of the application.
 This page gives the user option to either register as a host or for a visitor to check in and out.
