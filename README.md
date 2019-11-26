@@ -79,7 +79,7 @@ You should get something like this when every step has been followed correctly:
   &nbsp;&nbsp;&nbsp;&nbsp;e. checkInDate <br>
   &nbsp;&nbsp;&nbsp;&nbsp;f. timeStamp <br>
   &nbsp;&nbsp;&nbsp;&nbsp;g. checkoutTIme <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;h. status <br>    // either pending or departed depending on whether he has checked out.
+  &nbsp;&nbsp;&nbsp;&nbsp;h. status: [pending,departed] //depending on whether he has checked out. <br>
   &nbsp;&nbsp;&nbsp;&nbsp;i. hostEmail <br>
 
 #### &nbsp;&nbsp;2. Host: 
