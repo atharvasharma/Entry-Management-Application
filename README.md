@@ -72,21 +72,21 @@ You should get something like this when every step has been followed correctly:
 
 ### Models Used:
 ##### 1. Visitor:
-  a. Name <br>
-  b. Email <br>
-  c. Phone <br>
-  d. checkInTime <br>
-  e. checkInDate <br>
-  f. timeStamp <br>
-  g. checkoutTIme <br>
-  h. status <br>
-  i. hostEmail <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;a. Name <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;b. Email <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;c. Phone <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;d. checkInTime <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;e. checkInDate <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;f. timeStamp <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;g. checkoutTIme <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;h. status <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;i. hostEmail <br>
 
 ##### 2. Host: 
-  a. Name <br>
-  b. Email <br>
-  c. Phone <br>
-  d. Visitors []  // Relation between Host and Visitor is 1:N relationship. <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;a. Name <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;b. Email <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;c. Phone <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;d. Visitors []  // Relation between Host and Visitor is 1:N relationship. <br>
 
 Routes
 ---------------
