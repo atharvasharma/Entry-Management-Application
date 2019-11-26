@@ -1,0 +1,45 @@
+
+body {
+    background: #eee;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+.container{
+    margin-top:15vh;
+}
+.form-container{
+    background:white;
+    padding: 0 0px;
+}
+
+.heading-div{
+    text-align: center;
+    padding: 15px 0;
+    background: rgb(33,33,33);
+    color:white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.form-group{
+    font-weight: bold;
+    opacity: 0.9;
+    padding: 2% 3%;
+    margin:0;
+}
+.submit-button{
+    text-align: center;
+    margin:20px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .heading-div{
+        background: none;
+        color:black;
+    }
+    .form-container{
+        background:none;
+    }
+}
+

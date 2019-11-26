@@ -1,0 +1,42 @@
+.flash{
+    margin-top:10vh;
+    position:fixed;
+    top:3vh;
+    right:3vh;
+    z-index:100;
+    -webkit-animation: seconds 1.0s forwards;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 5s;
+    animation: seconds 1.0s forwards;
+    animation-iteration-count: 1;
+    animation-delay: 4s;
+}
+@-webkit-keyframes seconds {
+    0% {
+      opacity: 1;
+    }
+    25% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+      opacity: 0;
+      position: absolute;   
+    }
+} @keyframes seconds {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+      opacity: 0;
+      position: absolute;     
+    }
+}

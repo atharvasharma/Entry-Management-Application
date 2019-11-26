@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+body {
+    background: #eee;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+.header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color:rgb(33,33,33);
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+}
+.header div{
+    float:right;
+    color:white;
+    margin-right:2rem;
+    margin-top:1.2rem;
+    letter-spacing: 1.5px;
+}
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background:black;
+    z-index:99;
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.sidebarMenuInner li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+.index-container{
+    margin-top:15vh;
+}
+.heading-row{
+    text-align: center;
+}
+
+.visitor-div, .host-div{
+    text-align: center;
+    background:white;
+    margin-top:60px;
+    padding: 20px;
+    -webkit-box-shadow: -3px -7px 7px -7px rgba(0,0,0,0.1);
+    -moz-box-shadow:  -3px -7px 7px -7px rgba(0,0,0,0.1);
+    box-shadow: -3px -7px 7px -7px rgba(0,0,0,0.1);
+    border:2px solid rgba(0,0,0,0.1);
+    font-size:1.1rem;
+    transition:transform .2s;
+}
+.visitor-div:hover, .host-div:hover{
+    transform:scale(1.1);
+}
+.host-div{
+    -webkit-box-shadow: -3px -7px 7px -7px rgba(0,0,0,0.1);
+    -moz-box-shadow:  -3px -7px 7px -7px rgba(0,0,0,0.1);
+    box-shadow: -3px -7px 7px -7px rgba(0,0,0,0.1);
+    border:2px solid rgba(0,0,0,0.1);
+}
+.visitor-div h5{
+    margin-top:7px;
+    font-weight: bold;
+    letter-spacing:0.5px;
+}
+.host-div h5{
+    margin-top:7px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.paras{
+    margin-top:20px;
+    text-align: left;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .welcome{
+        font-size: 30px;
+    }
+    .container{
+        margin-left:5px;
+        margin-right:5px;
+
+    }
+    .visitor-div ,.host-div{
+        font-size:15px;
+        background:none;
+        box-shadow:none;
+        margin-top:20px;
+        border:none;
+    }
+}
