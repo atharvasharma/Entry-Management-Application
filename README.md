@@ -72,7 +72,7 @@ You should get something like this when every step has been followed correctly:
 
 ### Models Used:
 #### &nbsp;&nbsp;1. Visitor:
-  ```
+ 
   &nbsp;&nbsp;&nbsp;&nbsp;a. Name <br>
   &nbsp;&nbsp;&nbsp;&nbsp;b. Email <br>
   &nbsp;&nbsp;&nbsp;&nbsp;c. Phone <br>
@@ -82,14 +82,13 @@ You should get something like this when every step has been followed correctly:
   &nbsp;&nbsp;&nbsp;&nbsp;g. checkoutTIme <br>
   &nbsp;&nbsp;&nbsp;&nbsp;h. status: [pending,departed] //depending on whether he has checked out. <br>
   &nbsp;&nbsp;&nbsp;&nbsp;i. hostEmail <br>
-```
-```
+
 #### &nbsp;&nbsp;2. Host: 
   &nbsp;&nbsp;&nbsp;&nbsp;a. Name <br>
   &nbsp;&nbsp;&nbsp;&nbsp;b. Email <br>
   &nbsp;&nbsp;&nbsp;&nbsp;c. Phone <br>
   &nbsp;&nbsp;&nbsp;&nbsp;d. Visitors []  // Relation between Host and Visitor is 1:N relationship. <br>
-```
+  
 Routes
 ---------------
 ### 1\. "http://localhost:4000" Used to display home page of the application.
