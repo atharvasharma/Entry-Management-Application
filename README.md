@@ -71,7 +71,7 @@ You should get something like this when every step has been followed correctly:
 ![Folder](https://github.com/atharvasharma/Innovaccer-images/blob/master/folder.JPG)
 
 ### Models Used:
-##### &nbsp;&nbsp;1. Visitor:
+#### &nbsp;&nbsp;1. Visitor:
   &nbsp;&nbsp;&nbsp;&nbsp;a. Name <br>
   &nbsp;&nbsp;&nbsp;&nbsp;b. Email <br>
   &nbsp;&nbsp;&nbsp;&nbsp;c. Phone <br>
@@ -82,7 +82,7 @@ You should get something like this when every step has been followed correctly:
   &nbsp;&nbsp;&nbsp;&nbsp;h. status <br>
   &nbsp;&nbsp;&nbsp;&nbsp;i. hostEmail <br>
 
-##### &nbsp;&nbsp;2. Host: 
+#### &nbsp;&nbsp;2. Host: 
   &nbsp;&nbsp;&nbsp;&nbsp;a. Name <br>
   &nbsp;&nbsp;&nbsp;&nbsp;b. Email <br>
   &nbsp;&nbsp;&nbsp;&nbsp;c. Phone <br>
