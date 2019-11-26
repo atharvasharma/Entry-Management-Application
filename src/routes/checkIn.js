@@ -62,7 +62,7 @@ router.post("/checkin",function(req,res){
                                 }else{
                                     let hostPhone=foundHost.phone;
                                     let hostName=foundHost.name;
-                                    sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
+                                    //sendSms(hostPhone,hostName,visitorName,visitorPhone,visitorEmail);
                                     sendEmail(hostName,hostEmail,visitorName,visitorPhone,visitorEmail,null,null,true);
                                     req.session.visitorEmail=newVisitor.email;   //add visitor Email to express session.
                                     req.flash("success","You have been successfully added as a visitor");

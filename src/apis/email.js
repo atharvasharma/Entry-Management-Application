@@ -2,12 +2,13 @@ const express=require('express');
 const nodemailer=require('nodemailer');
 
 let mail=function sendMail(hostName,hostEmail,visitorName,visitorPhone,visitorEmail,checkOutTime,checkInTime,isCheckingIn){
-    let transporter=nodemailer.createTransport({
-        service:'gmail',
-        auth:{
-            user:'atharvasjp1@gmail.com',
-            pass:'Vivek@1234'
-        }
+    const transporter = nodemailer.createTransport({
+    	host: 'smtp.ethereal.email',
+    	port: 587,
+    	auth: {
+        	user: 'atharvasjp1@gmail.com',
+        	pass: 'Vivek@1234'
+    	}
     });
     let mailOptions;
     if(isCheckingIn){
