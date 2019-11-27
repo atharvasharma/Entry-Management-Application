@@ -18,6 +18,10 @@ Given the visitors that we have in office and outside, there is a need to for an
 
 -   NodeMailer email API
 
+-   EJS (npm package)
+
+-   Bootstrap
+
 ### Instructions to install
 
 1, Clone this repository:
@@ -88,7 +92,7 @@ You should get something like this when every step has been followed correctly:
   &nbsp;&nbsp;&nbsp;&nbsp;c. Phone <br>
   &nbsp;&nbsp;&nbsp;&nbsp;d. Visitors []  // Relation between Host and Visitor is 1:N relationship. <br>
 
-Routes
+Routes (with approaches)
 ---------------
 ### 1\. "http://localhost:4000" Used to display home page of the application.
 This page gives the user option to either register as a host or for a visitor to check in and out.
@@ -140,7 +144,7 @@ d. Else add the visitor in db, find host as entered by visitor and push visitor 
 e. Send sms and email to host. <br>
 
 ### 4\. "http://localhost:4000/checkout" Visitor can check-out here
-This page is used for the visitor to check-out. He will have to provide his email id to checkout from the application. After checking-out he will recieve an email, giving the details of his visit with the office address as provided in the .env file.
+This page is used for the visitor to check-out. He will have to confirm his email id to checkout from the application. After checking-out he will recieve an email, giving the details of his visit with the office address as provided in the .env file.
 
 The page looks like:
 
