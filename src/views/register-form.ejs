@@ -7,26 +7,28 @@
     <form method='POST' action='/register'>
         <div class="row">
             <div class="col-lg-3"></div>
-            <div class="col-lg-5 col-sm-12  form-container">
+            <div class="col-lg-6 col-sm-12  form-container">
                 <div class="heading-div">
-                    <h3>Register as Host</h3>
+                    <h3>Register As a Host</h3>
+                    <hr style="border-color:white;width:55%;">
                 </div>    
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter name" name='host-name' required>
+                <div class="register-inputs">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter name" name='host-name' required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name='host-email' required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter Phone Number" name='host-phone' maxlength='10' size='10' required>
+                    </div>
+                    <div class="submit-button">
+                        <button type="submit" class="btn btn-primary ">Submit</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" name='host-email' required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" class="form-control" id="phone" placeholder="Enter Phone Number" name='host-phone' maxlength='10' size='10' required>
-                </div>
-                <div class="submit-button">
-                    <button type="submit" class="btn btn-primary ">Submit</button>
-                </div>
-                
             </div>
         </div>
     </form>
