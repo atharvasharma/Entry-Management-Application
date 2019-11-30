@@ -10,7 +10,7 @@ let mail=function sendMail(hostName,hostEmail,visitorName,visitorPhone,visitorEm
         }
     });
     let mailOptions;
-    if(isCheckingIn){
+    if(isCheckingIn){                           // send mail while checking in to host
         let msg=`
             Hey ${hostName}, you have a new visitor. 
             His/her details are as follows: \n 
@@ -24,7 +24,7 @@ let mail=function sendMail(hostName,hostEmail,visitorName,visitorPhone,visitorEm
             subject:'You have a visitor',
             text:msg
         };
-    }else{
+    }else{                                  // send mail while checking out to visitor
         let address=process.env.ADDRESS;
         let msg=`
             Hey ${visitorName},
