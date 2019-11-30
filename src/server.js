@@ -49,9 +49,7 @@ app.use(indexRoutes);
 app.use(registerRoutes);
 app.use(checkInRoutes);
 app.use(checkOutRoutes);
-app.get("*",function(req,res){
-   res.send("This page doenot exists");
-})
+
 // Setting up the server
 let port = process.env.PORT || 3000;
 app.listen(port, function () {
