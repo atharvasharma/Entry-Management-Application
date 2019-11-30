@@ -84,7 +84,7 @@ You should get something like this when every step has been followed correctly:
   &nbsp;&nbsp;&nbsp;&nbsp;f. timeStamp <br>
   &nbsp;&nbsp;&nbsp;&nbsp;g. checkoutTIme <br>
   &nbsp;&nbsp;&nbsp;&nbsp;h. status ['Pending', 'Departed'] <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;i. hostEmail <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;i. hostEmail  // for referencing <br>
 
 #### &nbsp;&nbsp;2. Host: 
   &nbsp;&nbsp;&nbsp;&nbsp;a. Name <br>
