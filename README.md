@@ -163,6 +163,18 @@ a. Fetch visitor email from post request. <br>
 b. Find visitor with email same as entered in form and status as pending. If we are able to find such visitor then mark his status as departed and send him the mail of details. <br>
 c. Else the visitor forgot to check in or has already checked out. So flash an error msg. <br>
 
+
+### EMAIL AND SMS SCREENSHOTS:
+
+#### TO HOST
+![host email](https://github.com/atharvasharma/Innovaccer-images/blob/master/email%201.JPG)
+
+![host sms](https://github.com/atharvasharma/Innovaccer-images/blob/master/sms.jpg)
+
+#### TO VISITOR
+![visitor email](![host email](https://github.com/atharvasharma/Innovaccer-images/blob/master/email%201.JPG))
+
+
 ### CONTACT
 
 Atharva Sharma
