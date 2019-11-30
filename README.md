@@ -166,12 +166,18 @@ c. Else the visitor forgot to check in or has already checked out. So flash an e
 
 ### EMAIL AND SMS SCREENSHOTS:
 
-#### TO HOST
+### TO HOST
+
+#### EMAIL
 ![host email](https://github.com/atharvasharma/Innovaccer-images/blob/master/email%201.JPG)
+
+### SMS
 
 ![host sms](https://github.com/atharvasharma/Innovaccer-images/blob/master/sms.jpg)
 
-#### TO VISITOR
+### TO VISITOR
+
+### EMAIL
 ![visitor email](https://github.com/atharvasharma/Innovaccer-images/blob/master/email%202.jpg)
 
 
