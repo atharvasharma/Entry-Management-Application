@@ -130,7 +130,7 @@ The page looks like:
 
 If user is able to check in successfully, then he gets a success message as:
 
-![check in success](https://github.com/atharvasharma/Innovaccer-images/blob/master/check%20in%20success.JPG)
+![check in success](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkin%20success.JPG)
 
 If the user tries to checkin, even though he has already checked in. Then he is informed about the same though an error msg:
 
