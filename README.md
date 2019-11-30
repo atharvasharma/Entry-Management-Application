@@ -172,7 +172,7 @@ c. Else the visitor forgot to check in or has already checked out. So flash an e
 ![host sms](https://github.com/atharvasharma/Innovaccer-images/blob/master/sms.jpg)
 
 #### TO VISITOR
-![visitor email](![host email](https://github.com/atharvasharma/Innovaccer-images/blob/master/email%201.JPG))
+![visitor email](https://github.com/atharvasharma/Innovaccer-images/blob/master/email%202.jpg)
 
 
 ### CONTACT
