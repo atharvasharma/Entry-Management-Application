@@ -83,8 +83,8 @@ You should get something like this when every step has been followed correctly:
   &nbsp;&nbsp;&nbsp;&nbsp;e. checkInDate <br>
   &nbsp;&nbsp;&nbsp;&nbsp;f. timeStamp <br>
   &nbsp;&nbsp;&nbsp;&nbsp;g. checkoutTIme <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;h. status <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;i. hostEmail <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;h. status ['Pending', 'Departed'] <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;i. hostEmail  // for referencing <br>
 
 #### &nbsp;&nbsp;2. Host: 
   &nbsp;&nbsp;&nbsp;&nbsp;a. Name <br>
@@ -130,7 +130,7 @@ The page looks like:
 
 If user is able to check in successfully, then he gets a success message as:
 
-![check in success](https://github.com/atharvasharma/Innovaccer-images/blob/master/check%20in%20success.JPG)
+![check in success](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkin%20success.JPG)
 
 If the user tries to checkin, even though he has already checked in. Then he is informed about the same though an error msg:
 
@@ -144,7 +144,7 @@ d. Else add the visitor in db, find host as entered by visitor and push visitor 
 e. Send sms and email to host. <br>
 
 ### 4\. "http://localhost:4000/checkout" Visitor can check-out here
-This page is used for the visitor to check-out. He will have to confirm his email id to checkout from the application. After checking-out he will recieve an email, giving the details of his visit with the office address as provided in the .env file.
+This page is used for the visitor to check-out. He needs to confirm his email id to checkout which is already filled as value of input using express-session. After checking-out he will recieve an email, giving the details of his visit with the office address as provided in the .env file.
 
 The page looks like:
 
@@ -152,16 +152,34 @@ The page looks like:
 
 If user is able to check out successfully, then he gets a success message as:
 
-![check out success](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkout%20sucess.JPG)
+![check out success](https://github.com/atharvasharma/Innovaccer-images/blob/master/check%20out%20success.JPG)
 
 If user has already checked out, or forgot to checkin , he gets an error message as:
 
-![check out fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/check%20out%20fail.JPG)
+![check out fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkout%20success.JPG)
 
 #### Approach used for check-out: 
 a. Fetch visitor email from post request. <br>
 b. Find visitor with email same as entered in form and status as pending. If we are able to find such visitor then mark his status as departed and send him the mail of details. <br>
 c. Else the visitor forgot to check in or has already checked out. So flash an error msg. <br>
+
+
+### EMAIL AND SMS SCREENSHOTS:
+
+### TO HOST
+
+#### EMAIL
+![host email](https://github.com/atharvasharma/Innovaccer-images/blob/master/email%201.JPG)
+
+### SMS
+
+![host sms](https://github.com/atharvasharma/Innovaccer-images/blob/master/sms.jpg)
+
+### TO VISITOR
+
+### EMAIL
+![visitor email](https://github.com/atharvasharma/Innovaccer-images/blob/master/email%202.jpg)
+
 
 ### CONTACT
 
