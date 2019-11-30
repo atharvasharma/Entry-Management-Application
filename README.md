@@ -152,11 +152,11 @@ The page looks like:
 
 If user is able to check out successfully, then he gets a success message as:
 
-![check out success](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkout%20sucess.JPG)
+![check out success](https://github.com/atharvasharma/Innovaccer-images/blob/master/check%20out%20success.JPG)
 
 If user has already checked out, or forgot to checkin , he gets an error message as:
 
-![check out fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/check%20out%20fail.JPG)
+![check out fail](https://github.com/atharvasharma/Innovaccer-images/blob/master/checkout%20success.JPG)
 
 #### Approach used for check-out: 
 a. Fetch visitor email from post request. <br>
