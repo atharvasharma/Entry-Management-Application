@@ -1,23 +1,23 @@
 const express=require('express');
 const router=express.Router();
 
-const sendSms=require('../apis/sms');
-const sendEmail=require('../apis/email');
+const sendSms=require('../../apis/sms');
+const sendEmail=require('../../apis/email');
 
-const Visitor=require('../models/Visitor');
-const Host=require('../models/Host');
+const Visitor=require('../../models/Visitor');
+const Host=require('../../models/Host');
 
-const getTimeStamp=require('../utils/get-timestamp');
-const getTime=require('../utils/get-time');
-const getDate=require('../utils/get-date');
+const getTimeStamp=require('../../utils/get-timestamp');
+const getTime=require('../../utils/get-time');
+const getDate=require('../../utils/get-date');
 
-router.get("/checkin",function(req,res){
-    Host.find({},function(err,hosts){            // find hosts currently present in db.
+router.get(["/visitors/checkin","/checkin"],function(req,res){
+    Host.find({},function(err,hosts){                           // find hosts currently present in db.
         res.render("checkIn-form",{hosts:hosts});
     });
 })
 
-router.post("/checkin",function(req,res){
+router.post("/visitors/checkin",function(req,res){
 
     // get timestamp when user submits the form
     const timeStamp=getTimeStamp();
@@ -35,7 +35,7 @@ router.post("/checkin",function(req,res){
     Visitor.findOne({email:visitorEmail,status:'Pending'},function(err,foundVisitor){
         if(foundVisitor){   // might happen that visitor has already checked in.
             req.flash("error","You have already checked in.");
-            res.redirect("/checkin");
+            res.redirect("/visitors/checkin");
         }else{                                                // else add visitor in db  
             Visitor.create({
                 name:visitorName,
@@ -51,14 +51,14 @@ router.post("/checkin",function(req,res){
                 Host.findOne({email:hostEmail},function(err,foundHost){     // find host in db as entered by visitor
                     if(err){
                         req.flash("error","An error occured. Please try again");
-                        res.redirect("/checkin");
+                        res.redirect("/visitors/checkin");
                     }else{
                         if(foundHost){                              // add visitor to that host
                             foundHost.visitors.push(newVisitor);
                             foundHost.save(function(err,data){
                                 if(err){
                                     req.flash("error","An error occured. Please try again");
-                                    res.redirect("/checkin");
+                                    res.redirect("/visitors/checkin");
                                 }else{
                                     let hostPhone=foundHost.phone;
                                     let hostName=foundHost.name;
@@ -75,7 +75,7 @@ router.post("/checkin",function(req,res){
             })
             .catch(function(err){
                 req.flash("error","An error occured. Please try again");
-                res.redirect("/checkin");
+                res.redirect("/visitors/checkin");
             });
         }    
     })

@@ -1,18 +1,18 @@
 const express=require('express');
 const router=express.Router();
 
-const sendEmail=require('../apis/email');
+const sendEmail=require('../../apis/email');
 
-const Visitor=require('../models/Visitor');
-const Host=require('../models/Host');
-const getTime=require('../utils/get-time');
+const Visitor=require('../../models/Visitor');
+const Host=require('../../models/Host');
+const getTime=require('../../utils/get-time');
 
-router.get("/checkout",function(req,res){
+router.get(["/visitors/checkout","/checkout"],function(req,res){
     let visitorEmail=req.session.visitorEmail;     // get visitor email from express session.
     res.render("checkOut-form",{visitorEmail:visitorEmail});
 })
 
-router.post("/checkout",function(req,res){
+router.post("/visitors/checkout",function(req,res){
 
     let visitorEmail=req.body['visitor-email'];
     Visitor.findOne({email:visitorEmail,status:'Pending'},function(err,foundVisitor){
@@ -33,7 +33,7 @@ router.post("/checkout",function(req,res){
             Host.findOne({email:hostEmail},function(err,foundHost){        // Fetch host name for the given visitor.
                 if(err){
                     req.flash("error","We could not connect you to the host. Please try again");
-                    res.redirect("/checkout");
+                    res.redirect("/visitors/checkout");
                 }else{
                     hostName=foundHost.name;
                     sendEmail(hostName,null,visitorName,visitorPhone,visitorEmail,checkOutTime,checkInTime,false);  
@@ -44,7 +44,7 @@ router.post("/checkout",function(req,res){
             })
         }else{
             req.flash("error","You forgot to check in or you have already checked out");
-            res.redirect("/checkout");
+            res.redirect("/visitors/checkout");
         }
     })
 })

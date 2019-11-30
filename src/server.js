@@ -7,9 +7,9 @@ const mongoose=require('mongoose');
 const flash=require('connect-flash');
 
 const indexRoutes=require('./routes/index');
-const registerRoutes=require('./routes/register');
-const checkInRoutes=require('./routes/checkIn');
-const checkOutRoutes=require('./routes/checkOut');
+const registerRoutes=require('./routes/hosts/register');
+const checkInRoutes=require('./routes/visitors/checkIn');
+const checkOutRoutes=require('./routes/visitors/checkOut');
 
 // Set up the express app
 const app = express();
@@ -49,7 +49,9 @@ app.use(indexRoutes);
 app.use(registerRoutes);
 app.use(checkInRoutes);
 app.use(checkOutRoutes);
-
+app.get("*",function(req,res){
+   res.send("This page doenot exists");
+})
 // Setting up the server
 let port = process.env.PORT || 3000;
 app.listen(port, function () {
