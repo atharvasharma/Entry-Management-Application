@@ -143,7 +143,7 @@ c. Find a visitor with that email and status as 'pending'. This means that he ha
 d. Else add the visitor in db, find host as entered by visitor and push visitor into visitors array for that host. This will help in host to see all the visitors he had. <br>
 e. Send sms and email to host. <br>
 
-### 4\. "http://localhost:4000/visitors/checkout" or "http://localhost:4000/visitors/checkout" Visitor can check-out here
+### 4\. "http://localhost:4000/visitors/checkout" or "http://localhost:4000/checkout" Visitor can check-out here
 This page is used for the visitor to check-out. He needs to confirm his email id to checkout which is already filled as value of input using express-session. After checking-out he will recieve an email, giving the details of his visit with the office address as provided in the .env file.
 
 The page looks like:
