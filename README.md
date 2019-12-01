@@ -40,6 +40,8 @@ Given the visitors that we have in office and outside, there is a need to for an
 
 Refer to this link - <https://msg91.com/>
 
+If you are not unable to generate the <b>Authentication Key</b>, you can use this key for evaluation and testing(around 50 free msgs left) : '304908AsqhYvtb5dd5bda7'. The key is only for transactional msgs. Use 'MSGIND' as a <b>SENDERID</b>. 
+
 5, Create a .env file and add below mentioned details in it.
 ```
 # specify your port number here
