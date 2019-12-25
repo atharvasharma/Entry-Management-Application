@@ -24,7 +24,7 @@ Given the visitors that we have in office and outside, there is a need to for an
 
 1, Clone this repository:
 
-```git clone https://github.com/atharvasharma/Innovaccer-Summer-Geeks-SDE```
+```git clone https://github.com/atharvasharma/Entry-Management-Application```
 
 2, Change directory
 
@@ -101,7 +101,7 @@ It looks something like this:
 ![index](https://github.com/atharvasharma/Innovaccer-images/blob/master/index.JPG)
 
 
-### 2\. "http://localhost:4000/hosts/register" or "http://localhost:4000/register" Host can register himself here.
+### 2\. "http://localhost:4000/hosts/register" Host can register himself here.
 This page is used for the host to register. After registering the host will be visible to the visitor.
 The page looks like:
 
@@ -120,7 +120,7 @@ a. Fetch details as entered by host. <br>
 b. Find if a Host with that email already exists in db. If so, flash an error message. <br>
 c. Else add host to db, flash a success message. <br>
 
-### 3\. "http://localhost:4000/visitors/checkin" or "http://localhost:4000/checkin" Visitor can check-in here.
+### 3\. "http://localhost:4000/visitors/checkin" Visitor can check-in here.
 This page is used for the visitor to check-in. He will have to choose from one of the existing hosts and enter his own details.
 This will trigger an sms and email to host using API, details of which have been provided in .env file.
 
@@ -143,7 +143,7 @@ c. Find a visitor with that email and status as 'pending'. This means that he ha
 d. Else add the visitor in db, find host as entered by visitor and push visitor into visitors array for that host. This will help in host to see all the visitors he had. <br>
 e. Send sms and email to host. <br>
 
-### 4\. "http://localhost:4000/visitors/checkout" or "http://localhost:4000/checkout" Visitor can check-out here
+### 4\. "http://localhost:4000/visitors/checkout" or Visitor can check-out here
 This page is used for the visitor to check-out. He needs to confirm his email id to checkout which is already filled as value of input using express-session. After checking-out he will recieve an email, giving the details of his visit with the office address as provided in the .env file.
 
 The page looks like:
