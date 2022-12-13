@@ -22,7 +22,7 @@
     "connect-flash": "^0.1.1",
     "dotenv": "^8.2.0",
     "ejs": "^2.7.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.17.0",
     "moment-timezone": "^0.5.27",
     "mongoose": "^5.7.11",
